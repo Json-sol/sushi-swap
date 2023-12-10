@@ -11,6 +11,8 @@ require("dotenv").config()
 const config = require('../config.json')
 const IUniswapV2Router02 = require('@uniswap/v2-periphery/build/IUniswapV2Router02.json')
 const IUniswapV2Factory = require("@uniswap/v2-core/build/IUniswapV2Factory.json")
+const IArbitrage = require('../artifacts/contracts/Arbitrage.sol/Arbitrage.json')
+
 
 let provider
 
@@ -26,7 +28,6 @@ const uRouter = new hre.ethers.Contract(config.UNISWAP.V2_ROUTER_02_ADDRESS, IUn
 const sFactory = new hre.ethers.Contract(config.SUSHISWAP.FACTORY_ADDRESS, IUniswapV2Factory.abi, provider)
 const sRouter = new hre.ethers.Contract(config.SUSHISWAP.V2_ROUTER_02_ADDRESS, IUniswapV2Router02.abi, provider)
 
-const IArbitrage = require('../artifacts/contracts/Arbitrage.sol/Arbitrage.json')
 const arbitrage = new hre.ethers.Contract(config.PROJECT_SETTINGS.ARBITRAGE_ADDRESS, IArbitrage.abi, provider)
 
 module.exports = {
