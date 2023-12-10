@@ -11,7 +11,7 @@ require("dotenv").config()
 const config = require('../config.json')
 const IUniswapV2Router02 = require('@uniswap/v2-periphery/build/IUniswapV2Router02.json')
 const IUniswapV2Factory = require("@uniswap/v2-core/build/IUniswapV2Factory.json")
-const IArbitrage = require('../artifacts/contracts/Arbitrage.sol/Arbitrage.json')
+const IArbitrage = require('./arb.json')
 
 
 let provider
