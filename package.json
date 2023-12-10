@@ -6,6 +6,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
+    "@uniswap/v2-core": "^1.0.1",
     "big.js": "^6.2.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
